@@ -1,0 +1,27 @@
+.product-form {
+    font-size:25px;  
+    margin: 15%;
+    border:2px solid red;
+    border-radius: 10px;
+    padding: 5%;
+   
+  }
+  
+  .product-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-form label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .product-form input, .product-form textarea {
+    margin-top: 5px;
+  }
+  
+  .product-form input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+  }

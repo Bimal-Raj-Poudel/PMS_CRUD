@@ -5,39 +5,39 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
 
   const fetchProduct = async () => {
     const response = await axios.get(
       "https://660e43116ddfa2943b3635a7.mockapi.io/products"
     );
-    setProducts(response.data);
+    setProduct(response.data);
   };
   useEffect(() => {
     fetchProduct();
   }, []);
 
-  console.log(products);
-
   return (
     <>
       <Navbar />
-
-      {products.map((product) => {
+      
+        <div className="card-container">
+      {product.map((val) => {
         return (
-          <div key={product.id} className="product-card">
+          <div key={val.id} className="product-card">
             <img
               className="product-image"
-              src={product.}
+              src={val.ProductImage}
               alt="Product Image"
             />
             <h2 className="product-name">{product.ProductName}</h2>
             <p className="product-description">
-              {product.productDescription}
+              {val.productDescription}
             </p>
           </div>
         );
       })}
+      </div>
     </>
   );
 };

@@ -1,23 +1,24 @@
-import React from 'react';
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-    <nav className="navbar">
-    <div className="Logo">
-      <img src="logo.png" alt="Logo"/>
-    </div>
-    <ul className="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-      
+      <div className="navbar">
+        <div className="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+        <ul className="nav-links">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/addproduct">Add Product</Link>
+          </li>
+        </ul>
+      </div>
     </>
   );
-}
+};
 
 export default Navbar;
-
